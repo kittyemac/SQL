@@ -1,7 +1,9 @@
---Create a grocery store database
+## Create a grocery store database
 
+```sql
 CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, popularity INTEGER);
-
+```
+```sql
 INSERT INTO store VALUES (1, "porridge oats", "produce", 2.49, 2);
 INSERT INTO store VALUES (2, "strawberry jam", "produce", 3.15, 5);
 INSERT INTO store VALUES (3, "mango", "frozen", 2.79, 3);
@@ -17,22 +19,24 @@ INSERT INTO store VALUES (12, "eggs", "produce", 2, 6);
 INSERT INTO store VALUES (13, "dog food", "pets", 5.50, 8);
 INSERT INTO store VALUES (14, "kiwi fruit", "fresh", 3.80, 3);
 INSERT INTO store VALUES (15, "power paste", "household", 1.90, 4);
-
---display the database ordered by price. 
-
+```
+### display the database ordered by price. 
+```sql
 SELECT * FROM store
 ORDER BY price desc;
+```
 
-
---what is the avg price of items in the fresh section? 
+### what is the average price of items in the fresh section? 
+```sql
 SELECT AVG(price) "avg fresh item price"
 FROM store
 WHERE section = "fresh";
+```
 
-
---what are the most 6 popular items? 
+### what are the six most popular items? 
+```sql
 SELECT item, price, popularity
 FROM store
 ORDER BY popularity desc
 LIMIT 6;
-
+```
