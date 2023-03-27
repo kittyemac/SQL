@@ -20,20 +20,20 @@ INSERT INTO store VALUES (13, "dog food", "pets", 5.50, 8);
 INSERT INTO store VALUES (14, "kiwi fruit", "fresh", 3.80, 3);
 INSERT INTO store VALUES (15, "power paste", "household", 1.90, 4);
 ```
-### display the database ordered by price. 
+### Display the database ordered by price. 
 ```sql
 SELECT * FROM store
 ORDER BY price desc;
 ```
 
-### what is the average price of items in the fresh section? 
+### What is the average price of items in the fresh section? 
 ```sql
 SELECT AVG(price) "avg fresh item price"
 FROM store
 WHERE section = "fresh";
 ```
 
-### what are the six most popular items? 
+### What are the six most popular items? 
 ```sql
 SELECT item, price, popularity
 FROM store
