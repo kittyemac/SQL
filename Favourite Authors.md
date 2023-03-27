@@ -1,7 +1,9 @@
--- Create table about authors and your favourite book of theirs 
+### Create table about authors and your favourite book of theirs 
+
 ```sql
 CREATE TABLE authors (id INTEGER PRIMARY KEY, name TEXT, country_of_origin TEXT, favourite_book TEXT, original_language TEXT, favourite_book_length INTEGER);
-
+```
+```sql
 INSERT INTO authors VALUES (1, "Elena Ferrante", "Italy", "My Brilliant Friend","Italian", 311);
 INSERT INTO authors VALUES (2, "Herman Melville", "America", "Moby Dick", "English", 427);
 INSERT INTO authors VALUES (3, "Haruki Murakami", "Japan", "Kafka on the Shore", "Japanese", 448);
@@ -14,17 +16,21 @@ INSERT INTO authors VALUES (9, "Ryu Murakami", "Japan", "In the Miso Soup", "Jap
 INSERT INTO authors VALUES (10, "J. M. Coetzee", "South Africa", "Disgrace", "English", 220);
 INSERT INTO authors VALUES (11, "Oyinkan Braithwaite", "Nigeria", "My Sister the Serial Killer", "English", 226);
 ```
+```sql
 CREATE TABLE continents (id INTEGER PRIMARY KEY, country TEXT, language TEXT, continent TEXT);
-
+```
+```sql
 INSERT INTO continents VALUES (1, "England", "English", "Europe");
 INSERT INTO continents VALUES (2, "Nigeria", "English", "Africa");
 INSERT INTO continents VALUES (3, "Japan", "Japanese", "Asia");
 INSERT INTO continents VALUES (4, "Italy", "Italian", "Europe");
 INSERT INTO continents VALUES (5, "South Africa", "English", "Africa");
 INSERT INTO continents VALUES (6, "America", "English", "North America");
+```
 
--- create a database with a new colomn describing if the books are novels or novellas based on their length, and join with continents to show the author's continent of origin
+**I then created a database with a new colomn describing if the books are novels or novellas based on their length, and join with continents to show the author's continent of origin**
 
+```sql
 SELECT authors.name, authors.favourite_book,continents.continent,
     CASE
         WHEN favourite_book_length > 250 THEN "Novel"
@@ -33,3 +39,4 @@ SELECT authors.name, authors.favourite_book,continents.continent,
     FROM authors
     JOIN continents
     ON authors.country_of_origin = continents.country;
+```
