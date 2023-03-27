@@ -6,3 +6,10 @@ FROM BIT_DB.JanSales
 WHERE length(orderid) = 6
 AND orderid <> 'Order ID’;
 ```
+```sql
+SELECT COUNT(orderid) 
+FROM BIT_DB.JanSales
+WHERE Product = 'iPhone'
+AND length(orderid) = 6
+AND orderid <> 'Order ID';
+```
