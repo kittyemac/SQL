@@ -56,8 +56,8 @@ GROUP BY product;
 
 
 #7. How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers?
-SELECT count(distinct cust.acctnum) as cust_count, AVG(quantity * price) as avg_revenue
 
+SELECT count(distinct cust.acctnum) as cust_count, AVG(quantity * price) as avg_revenue
 FROM BIT_DB.FebSales Feb
 LEFT JOIN BIT_DB.customers cust
 ON Feb.orderid = cust.order_id
