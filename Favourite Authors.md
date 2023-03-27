@@ -1,5 +1,5 @@
 -- Create table about authors and your favourite book of theirs 
-
+```sql
 CREATE TABLE authors (id INTEGER PRIMARY KEY, name TEXT, country_of_origin TEXT, favourite_book TEXT, original_language TEXT, favourite_book_length INTEGER);
 
 INSERT INTO authors VALUES (1, "Elena Ferrante", "Italy", "My Brilliant Friend","Italian", 311);
@@ -13,7 +13,7 @@ INSERT INTO authors VALUES (8, "Robert Graves", "England", "I, Claudius", "Engli
 INSERT INTO authors VALUES (9, "Ryu Murakami", "Japan", "In the Miso Soup", "Japanese", 217);
 INSERT INTO authors VALUES (10, "J. M. Coetzee", "South Africa", "Disgrace", "English", 220);
 INSERT INTO authors VALUES (11, "Oyinkan Braithwaite", "Nigeria", "My Sister the Serial Killer", "English", 226);
-
+```
 CREATE TABLE continents (id INTEGER PRIMARY KEY, country TEXT, language TEXT, continent TEXT);
 
 INSERT INTO continents VALUES (1, "England", "English", "Europe");
