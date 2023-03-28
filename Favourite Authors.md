@@ -22,7 +22,7 @@ INSERT INTO authors VALUES (11, "Oyinkan Braithwaite", "Nigeria", "My Sister the
 ```
 #### 1.3 A view of the populated 'authors' table
 | ID    | name          | country_of_origin| favourite_book | original_language | book_length |
-| ------|:-------------:| :-----:|:-------------:|:-------------:|:-------------:|
+| :------:|:-------------:| :-----:|:-------------:|:-------------:|:-------------:|
 |1| Elena Ferrante| Italy| My Brilliant Friend|Italian| 311|
 |2| Herman Melville|America|Moby Dick|English|427|
 |3| Haruki Murakami|Japan|Kafka on the Shore|Japanese|448|
@@ -51,7 +51,7 @@ INSERT INTO continents VALUES (6, "America", "English", "North America");
 ```
 #### 2.3 A view of the populated 'continents' table
 ID|country|language|continent
----|---|---|---
+:---:|:---:|:---:|:---:
 1|England|English|Europe
 2|Nigeria|English|Africa
 3|Japan|Japanese|Asia
@@ -76,7 +76,7 @@ SELECT authors.name, authors.favourite_book,continents.continent,
 ```
 #### 3.2 Query Results
 name	|favourite_book|	continent	|type
----|---|---|---
+:---:|:---:|:---:|:---:
 Elena Ferrante	|My Brilliant Friend	|Europe|	Novel
 Herman Melville|	Moby Dick|	North America|	Novel
 Haruki Murakami|	Kafka on the Shore	|Asia|Novel
